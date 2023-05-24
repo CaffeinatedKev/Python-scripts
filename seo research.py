@@ -11,21 +11,12 @@ import json
 
 
 # set the website URL to crawl
-url = "https://evolo.no"
+url = ""
 
 # optional list of keywords to research instead of crawling website
-keyword_list = ['sd anlegg',
-'byggautomasjon',
-'energioppfølging',
-'energioppfølgingssystem',
-'elektroinstallatør',
-'energieffektivisering',
-'visualisering',
-'integrasjonsregler',
-'elektro installatør',
-'bygg automasjon',
-'elektroinstallatører',
-'driftskontroll']
+keyword_list = ['visuell identitet', 'branding', 'grafisk profil']
+
+common_keywords = []
  
 if url:
 
@@ -147,6 +138,7 @@ if url:
         f.write("\nMost common trigrams:\n")
         for trigram, count in sorted_trigrams[:10]:
             f.write(trigram + ": " + str(count) + "\n")
+
 
 common_keywords.extend(keyword_list)
 
